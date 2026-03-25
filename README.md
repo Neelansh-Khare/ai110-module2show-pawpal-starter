@@ -12,32 +12,21 @@ A busy pet owner needs help staying consistent with pet care. They want an assis
 
 Your job is to design the system first (UML), then implement the logic in Python, then connect it to the Streamlit UI.
 
-## What you will build
+## Smarter Scheduling
 
-Your final app should:
+PawPal+ includes an algorithmic layer that makes scheduling easier:
+- **Chronological Sorting:** Tasks are automatically ordered by time.
+- **Conflict Detection:** The system warns you if multiple tasks are scheduled for the same time.
+- **Recurrence Logic:** Mark a "Daily" or "Weekly" task as done, and PawPal+ automatically schedules the next instance for you.
+- **Filtering:** Filter tasks by status (Pending/Completed) or by specific pet.
 
-- Let a user enter basic owner + pet info
-- Let a user add/edit tasks (duration + priority at minimum)
-- Generate a daily schedule/plan based on constraints and priorities
-- Display the plan clearly (and ideally explain the reasoning)
-- Include tests for the most important scheduling behaviors
+## Testing PawPal+
 
-## Getting started
-
-### Setup
-
+To ensure the system is reliable, a comprehensive test suite is included.
+Run the tests with:
 ```bash
-python -m venv .venv
-source .venv/bin/activate  # Windows: .venv\Scripts\activate
-pip install -r requirements.txt
+source .venv/bin/activate
+python -m pytest tests/test_pawpal.py
 ```
 
-### Suggested workflow
-
-1. Read the scenario carefully and identify requirements and edge cases.
-2. Draft a UML diagram (classes, attributes, methods, relationships).
-3. Convert UML into Python class stubs (no logic yet).
-4. Implement scheduling logic in small increments.
-5. Add tests to verify key behaviors.
-6. Connect your logic to the Streamlit UI in `app.py`.
-7. Refine UML so it matches what you actually built.
+**Confidence Level:** ⭐⭐⭐⭐⭐ (5/5) - The core logic is fully covered by automated tests.
