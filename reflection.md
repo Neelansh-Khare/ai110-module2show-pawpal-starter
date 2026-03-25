@@ -2,10 +2,21 @@
 
 ## 1. System Design
 
+**Core Actions:**
+1. **Add and Manage Pets:** Users can create profiles for multiple pets, storing their names and species.
+2. **Schedule and Track Tasks:** Users can add specific care tasks (like walks or feeding) with set times, priorities, and frequencies, and mark them as complete.
+3. **Generate Daily Schedule:** The system can compile all tasks across all pets into a sorted, chronological daily plan with conflict detection.
+
 **a. Initial design**
 
 - Briefly describe your initial UML design.
 - What classes did you include, and what responsibilities did you assign to each?
+
+I designed a system with four main classes: `Owner`, `Pet`, `Task`, and `Scheduler`. 
+- **Owner**: Manages a collection of pets.
+- **Pet**: Holds name, species, and its specific list of tasks.
+- **Task**: Represents a single care action with attributes like description, time, duration, priority, frequency, and status.
+- **Scheduler**: Acts as the logic layer to aggregate tasks from an owner's pets, sort them chronologically, filter by attributes, and identify conflicts.
 
 **b. Design changes**
 
